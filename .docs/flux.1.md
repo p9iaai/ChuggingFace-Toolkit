@@ -67,7 +67,7 @@ generate_image("a group of squirrels playing poker in a tree", model="FLUX.1-dev
 | `guidance_scale` | `float` | `7.5` | Controls how closely the image follows the prompt. Higher values = stricter. |
 | `num_inference_steps` | `int` | `6` | The number of denoising steps. More steps = higher quality (but slower). |
 | `width`         | `int`  | `1024` | The width of the output image in pixels. |
-| `height`        | `int`  | `576`  | The height of the output image in pixels. |
+| `height`        | `int`  | `1024`  | The height of the output image in pixels. |
 | `max_retries`   | `int`  | `9`    | The maximum number of retries for failed requests. |
 
 - The default `num_inference_steps` is set to 6 for `FLUX.1-schnell`. You should make this 20~24 for `FLUX.1-dev`.
