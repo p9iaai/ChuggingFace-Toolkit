@@ -1,0 +1,6 @@
+.logs
+input
+output
+venv
+.venv
+.env
