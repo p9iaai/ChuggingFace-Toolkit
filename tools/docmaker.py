@@ -18,15 +18,11 @@ HF_TOKEN = os.getenv("HF_TOKEN")
 # Initialize the InferenceClient
 client = InferenceClient(api_key=HF_TOKEN)
 
-
-
 # Choose one of the available models
 MODEL = "Qwen/Qwen2.5-Coder-32B-Instruct"
 # MODEL = "meta-llama/Llama-3.1-70B-Instruct"
 # MODEL = "meta-llama/Llama-3.3-70B-Instruct"
 # MODEL = "mistralai/Mixtral-8x7B-Instruct-v0.1"
-
-
 
 # Folder containing input YAML files
 INPUT_FOLDER = "input/docmaker"

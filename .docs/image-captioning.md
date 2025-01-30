@@ -13,10 +13,10 @@ This project provides a Python script for generating captions for images using t
 
 1. Place your images in the `input/image-captioning` directory
 
-2. Run the script:
+2. Run the script from the root:
 
 ```python
-python image-captioning.py
+python tools/image-captioning.py
 ```
 
 The script will:
@@ -74,6 +74,8 @@ This script uses the Salesforce BLIP (Bootstrapped Language-Image Pretraining) m
 - Input: Image files
 - Output: Textual description of the image
 
+If you want to use a different model, find one on 🤗HuggingFace and change the endpoint in the script.
+
 ## Example
 
 Given an image `example.jpg` in the input folder, the script will:
@@ -82,17 +84,26 @@ Given an image `example.jpg` in the input folder, the script will:
 2. Save the caption to `output/image-captioning/{model}/example.txt`
 3. Log the processing details
 
-Example log entry:
-
-```text
-IMAGE:         input/image-captioning/example.jpg
-DESCRIPTION:   a cat sitting on a windowsill looking outside
-FILENAME:      example.txt
-MODEL:         blip-image-captioning-large
-```
-
 ## Notes
 
 - The script automatically creates necessary directories if they don't exist
 - Processing time depends on image size and API response time
 - Ensure your Hugging Face token has sufficient permissions for the model
+
+---
+
+<div align="center">
+
+**ChuggingFace is very pleased...**
+
+<img src=".assets/chuggingface_toolkit.png" width="512" alt="ChuggingFace">
+
+---
+
+**p9iaai** <img src=".assets/p9iaai.png" width="32" align="middle"> **2025**
+
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/p9iaai)
+
+---
+
+</div>

@@ -3,7 +3,6 @@ import time
 import requests
 from dotenv import load_dotenv
 
-
 print("")
 
 # Load environment variables from .env file
@@ -13,11 +12,6 @@ load_dotenv()
 HF_TOKEN = os.getenv('HF_TOKEN')
 
 model = "blip-image-captioning-large"
-
-
-
-
-
 
 API_URL = f"https://api-inference.huggingface.co/models/Salesforce/{model}"
 headers = {"Authorization": f"Bearer {HF_TOKEN}"}

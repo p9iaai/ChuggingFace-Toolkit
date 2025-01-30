@@ -33,7 +33,7 @@ A Python script that automatically generates comprehensive Markdown documentatio
     etc
 ```
 
-2. Run the script:
+2. Run the script from the root:
 
 ```python
 python tools/docmaker.py
@@ -86,3 +86,21 @@ The script includes several error handling mechanisms:
 - `TIMEOUT`: API request timeout in seconds (default: `30`)
 - `INPUT_FOLDER`: Location of `YAML` input files (default: `input/docmaker`)
 - `OUTPUT_FOLDER`: Location for generated Markdown files (default: `output/docmaker`)
+
+---
+
+<div align="center">
+
+**ChuggingFace is very pleased...**
+
+<img src=".assets/chuggingface_toolkit.png" width="512" alt="ChuggingFace">
+
+---
+
+**p9iaai** <img src=".assets/p9iaai.png" width="32" align="middle"> **2025**
+
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/p9iaai)
+
+---
+
+</div>

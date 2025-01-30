@@ -19,10 +19,10 @@ A Python script for upscaling images using the Gradio client to interact with a 
 ### Basic Usage
 
 1. Place your images in the `input/image-upscaler` directory
-2. Run the script:
+2. Run the script from the root:
 
 ```bash
-python image-upscaler.py
+python tools/image-upscaler.py
 ```
 
 3. Find upscaled images in `output/image-upscaler`
@@ -82,12 +82,20 @@ The script includes comprehensive error handling:
 
 All errors are logged with detailed information for troubleshooting.
 
-## Dependencies
+---
 
-- Python 3.8+
-- Required packages:
-  - gradio_client
-  - python-dotenv
-  - colorama
-  - pathlib
-  - logging
+<div align="center">
+
+**ChuggingFace is very pleased...**
+
+<img src=".assets/chuggingface_toolkit.png" width="512" alt="ChuggingFace">
+
+---
+
+**p9iaai** <img src=".assets/p9iaai.png" width="32" align="middle"> **2025**
+
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/p9iaai)
+
+---
+
+</div>

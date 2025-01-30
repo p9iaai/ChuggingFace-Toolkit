@@ -10,7 +10,7 @@ This Python script uses the Suno Bark model from 🤗HuggingFace to convert text
 
 ## Usage
 
-1. Run the script:
+1. Run the script from the root:
 
 ```bash
 python tools/text-to-speech.py
@@ -40,8 +40,6 @@ python tools/text-to-speech.py
 
 ```bash
 python tools/text-to-speech.py
-    # Enter the text to convert to speech: Hello world!
-    # Audio saved as output/suno-bark/Hello_world.wav
 ```
 
 ## Terminal
@@ -59,3 +57,21 @@ python tools/text-to-speech.py
   - Length is limited to 50 characters
 - Ensure the `output/text-to-speech/` directory exists before running the script
 - The model is uncensored.
+
+---
+
+<div align="center">
+
+**ChuggingFace is very pleased...**
+
+<img src=".assets/chuggingface_toolkit.png" width="512" alt="ChuggingFace">
+
+---
+
+**p9iaai** <img src=".assets/p9iaai.png" width="32" align="middle"> **2025**
+
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/p9iaai)
+
+---
+
+</div>

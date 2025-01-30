@@ -34,6 +34,6 @@ echo Environment setup complete.
 
 echo Ready!
 
-echo Don't forget to add your HuggingFace token to the .env file
+echo Don't forget to add your 🤗HuggingFace token to the .env file
 
 echo Now you can run the tools in the tools folder.

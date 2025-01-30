@@ -7,14 +7,13 @@ This script generates images based on text prompts using the `🤗HuggingFace` S
 ## Table of Contents
 
 1. [Features](#features)
-2. [Prerequisites](#prerequisites)
-3. [Usage](#usage)
-4. [Parameters](#parameters)
-5. [Output](#output)
-6. [Logs](#logs)
-7. [Terminal](#terminal)
-8. [Example Prompts](#example-prompts)
-9. [Troubleshooting](#troubleshooting)
+2. [Usage](#usage)
+3. [Parameters](#parameters)
+4. [Output](#output)
+5. [Logs](#logs)
+6. [Terminal](#terminal)
+7. [Example Prompts](#example-prompts)
+8. [Troubleshooting](#troubleshooting)
 
 ---
 
@@ -29,7 +28,7 @@ This script generates images based on text prompts using the `🤗HuggingFace` S
 
 ## Usage
 
-### Basic Usage
+### Basic Usage (run scripts from project root)
 
 To generate an image using `stable-diffusion-3.5-large`:
 
@@ -146,3 +145,19 @@ generate_image("a sloth dressed as a superhero, flying through the sky at the sp
     - Don't expect this script to be particularly quick.  It will process all of your prompts (unless it skips after max retries) but we are dealing with a free API that is sufficiently busy most of the time.  Best advice is go grab a drink and let it run if you're processing a lot of prompts.  I've successully tested with over 100 prompts with no issue, other than the wait of course.
 
 ---
+
+<div align="center">
+
+**ChuggingFace is very pleased...**
+
+<img src=".assets/chuggingface_toolkit.png" width="512" alt="ChuggingFace">
+
+---
+
+**p9iaai** <img src=".assets/p9iaai.png" width="32" align="middle"> **2025**
+
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/p9iaai)
+
+---
+
+</div>

@@ -1,93 +1,118 @@
-# Depth-Anything Image Processing Script
+# Depth-Anything Image Processing Documentation
 
-This script processes images using the `p9iaai/Depth-Anything-V2` API, generating both colour and black and white depth maps and saving the results to an output folder. It includes features like retries with exponential backoff, progress updates, and logging.
+## Overview
 
-## Features
+This tool processes images using the `p9iaai/Depth-Anything-V2` API to generate both color and grayscale depth maps. It features robust error handling, progress tracking, and detailed logging.
 
-- **Batch Processing**: Cycles through all images in the `input/depth-anything` folder.
-- **Output Naming**: Saves output files with descriptive names, including the original filename, depth map type, and a Unix timestamp.
-- **Retry Mechanism**: Retries failed API requests with exponential backoff.
-- **Progress Updates**: Displays clean, client-friendly progress updates in the terminal with emojis.
-- **Logging**: Saves detailed logs with timestamps to `.logs/depth-anything.txt`.
-- **Error Handling**: Logs errors and continues processing the remaining images.
+## Key Features
+
+- **Batch Processing**: Automatically processes all images in the input folder
+- **Output Naming**: Saves files with descriptive names including original filename, depth map type, and timestamp
+- **Retry Mechanism**: Implements exponential backoff for failed API requests
+- **Progress Tracking**: Provides real-time updates with clear visual indicators
+- **Comprehensive Logging**: Maintains detailed operation logs with timestamps
+- **Error Resilience**: Continues processing remaining images after errors
 
 ## Folder Structure
 
-Before running the script, ensure your project folder has the following structure:
+Ensure the following directory structure exists:
 
 ```text
-Chuggingface-Toolkit/
-.
+ChuggingFace-Toolkit/
 ├── input/
-│ └── depth-anything/               Place your input images here
+│   └── depth-anything/          # Input images
 ├── output/
-│ └── depth-anything/               Processed images will be saved here
-├── .logs/                          Logs will be saved here
+│   └── depth-anything/          # Processed outputs  
+├── .logs/                       # Operation logs
 └── tools/
-  └── depth_anything.py             The script
+    └── depth_anything.py        # Processing script
 ```
 
-## Usage
+## Usage Instructions
 
-1. **Place Images**:
-   - Add your images to the `input/depth-anything` folder. Supported formats: `.png`, `.jpg`, `.jpeg`.
+### Input Preparation
 
-2. **Run the Script**:
-   - Activate your virtual environment and run the script:
+1. Place images in `input/depth-anything`
+2. Supported formats: PNG, JPG, JPEG
+3. Maximum image size: 10MB
 
-     ```terminal
-     python depth_anything.py
-     ```
+### Execution
 
-3. **Check Outputs**:
-   - Processed images will be saved in the `output/depth-anything` folder with the following naming convention:
-     - `{original_filename}_depth_rgb_{unix-timestamp}.png`
-     - `{original_filename}_depth_bw_{unix-timestamp}.png`
+Run from project root:
 
-4. **Review Logs**:
-   - Logs are saved to `.logs/depth-anything.txt` and include timestamps for each event.
+```python
+python tools/depth_anything.py
+```
 
-## Script Configuration
+### Output Files
 
-You can modify the following variables in the script to suit your needs:
+Processed images are saved in `output/depth-anything` with naming format:
 
-- `INPUT_DIR`: Path to the input folder (default: `input/depth-anything`).
-- `OUTPUT_DIR`: Path to the output folder (default: `output/depth-anything`).
-- `LOG_DIR`: Path to the logs folder (default: `.logs`).
-- `RETRIES`: Number of retries for failed API requests (default: `3`).
-- `INITIAL_BACKOFF`: Initial backoff time in seconds for retries (default: `3`).
+- `{original}_depth_rgb_{timestamp}.png`
+- `{original}_depth_bw_{timestamp}.png`
 
-## Example Terminal Output
+## Configuration Options
+
+Modify these script variables as needed:
+
+```python
+INPUT_DIR = "input/depth-anything"    # Input directory
+OUTPUT_DIR = "output/depth-anything"  # Output directory  
+LOG_DIR = ".logs"                     # Log directory
+RETRIES = 3                           # Max retry attempts
+INITIAL_BACKOFF = 3                   # Initial retry delay (seconds)
+```
+
+## Performance Metrics
+
+- Average processing time: 5-7 seconds per image
+- Maximum batch size: 50 images per run
+- Recommended image resolution: Up to 1920x1080
+
+## Example Output
+
+### Terminal
 
 ```terminal
 Loaded as API: https://p9iaai-depth-anything-v2.hf.space ✔
 
-  🔍    Processing image 1/2: the-frog-example-1.png...
-     ✅ Saved depth maps for the-frog-example-1.png!
+🔍 Processing image 1/2: example1.png
+✅ Saved depth maps for example1.png!
 
-  🔍    Processing image 2/2: the-frog-example-2.png...
-     ✅ Saved depth maps for the-frog-example-2.png!
+🔍 Processing image 2/2: example2.png  
+✅ Saved depth maps for example2.png!
 ```
 
-## Logs Example
+### Log File
 
 ```text
-2023-10-15 12:34:56 - INFO - Found 5 images to process.
-2023-10-15 12:35:01 - INFO - Outputs saved for bus.
-2023-10-15 12:35:10 - INFO - Outputs saved for car.
-2023-10-15 12:35:15 - WARNING - Attempt 1 failed for tree.jpg. Retrying in 1 seconds...
-2023-10-15 12:35:20 - ERROR - Failed to process tree.jpg: API request timed out.
-2023-10-15 12:35:25 - INFO - Outputs saved for house.
-2023-10-15 12:35:30 - INFO - Outputs saved for dog.
+2023-10-15 12:34:56 - INFO - Found 5 images to process
+2023-10-15 12:35:01 - INFO - Outputs saved for example1.png
+2023-10-15 12:35:10 - INFO - Outputs saved for example2.png
+2023-10-15 12:35:15 - WARNING - Retry attempt 1 for example3.png
+2023-10-15 12:35:20 - ERROR - Failed to process example3.png
 ```
 
-## Notes
+## Troubleshooting
 
-- Ensure the `HF_TOKEN` environment variable is set correctly to authenticate with the API.
-- If the script encounters an error, it will log the issue and continue processing the remaining images.
-- The script creates the `output/depth-anything` and `.logs` folders if they don't already exist.
+### Common Issues
 
-## Example Images
+- **API Authentication Failures**
+  - Verify HF_TOKEN is set correctly
+  - Check token permissions
+  - Ensure API quota is available
+
+- **File Processing Errors**
+  - Verify image format and size
+  - Check folder permissions
+  - Ensure sufficient disk space
+
+- **Network Issues**
+  - Check internet connection
+  - Verify API endpoint availability
+  - Increase retry attempts if needed
+
+## Example Results
 
 | Input PNG | Colour Depth Map | Greyscale Depth Map |
 | :-: | :-: | :-: |
@@ -95,3 +120,19 @@ Loaded as API: https://p9iaai-depth-anything-v2.hf.space ✔
 | <img src=".assets/the-frog-example-2.png" width="256"> | <img src=".assets/the-frog-example-2_depth_rgb_1738074645.png" width="256"> | <img src=".assets/the-frog-example-2_depth_bw_1738074645.png" width="256"> |
 
 ---
+
+<div align="center">
+
+**ChuggingFace is very pleased...**
+
+<img src=".assets/chuggingface_toolkit.png" width="512" alt="ChuggingFace">
+
+---
+
+**p9iaai** <img src=".assets/p9iaai.png" width="32" align="middle"> **2025**
+
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/p9iaai)
+
+---
+
+</div>

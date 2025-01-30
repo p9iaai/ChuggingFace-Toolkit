@@ -1,47 +1,76 @@
-# Background Removal Tool
+# Background Removal Tool Documentation
 
-Batch processes images to remove backgrounds using 🤗HuggingFace Spaces API.
+## Overview
 
-## Usage
+This tool provides automated background removal for images using 🤗HuggingFace Spaces API. It processes images in batch mode, making it ideal for bulk image processing tasks.
 
-1. Place images in the `input\background-removal` folder.
-2. Run script:
+## Usage Instructions
 
-    ```python
-    python background-removal.py
-    ```
+### Input Preparation
 
-3. Find processed images in the `output\background-removal` folder.
+1. Place images in the `input/background-removal` folder
+2. Ensure images are in supported formats: PNG, JPG/JPEG
+3. Verify folder permissions allow read/write access
 
-## Example Output
+### Execution
+
+Run the script from the project root directory:
 
 ```bash
-🔍   Found 3 images to process!
-
-🙄   Processing 1/3: image1.png
-
-✔️   Successfully processed!   ✔️   💪😎🤙
-
-🙄   Processing 2/3: image2.png
-
-✔️   Successfully processed!   ✔️   💪😎🤙
-
-🙄   Processing 3/3: image3.png
-
-✔️   Successfully processed!   ✔️   💪😎🤙
-
-🥰   Completed: 3/3 images processed successfully!
+python tools/background-removal.py
 ```
 
-## Supported Formats
+### Output
 
-- PNG
-- JPG / JPEG
+Processed images will be saved in:
 
-## Troubleshooting
+```text
+output/background-removal
+```
 
-- Invalid API response: Verify your HF_TOKEN is correct
-- No output file: Ensure input images are valid format
-- Permission errors: Check folder permissions
+### Example Terminal output:
+
+<img src=".assets/background_removal_terminal.PNG" alt="Terminal Example Screen" />
+
+## Performance Expectations
+
+- Average processing time: 2-3 seconds per image
+- Maximum image size: 5MB
+- Recommended batch size: Up to 100 images per run
+
+## Troubleshooting Guide
+
+### Common Issues
+
+- **Invalid API response**
+  - Verify HF_TOKEN is correctly set
+  - Check token permissions
+  - Ensure API quota is available
+
+- **No output file generated**
+  - Verify input image format
+  - Check file permissions
+  - Ensure image size is within limits
+
+- **Permission errors**
+  - Verify folder permissions
+  - Check user account privileges
+  - Ensure sufficient disk space
 
 ---
+
+<div align="center">
+
+**ChuggingFace is very pleased...**
+
+<img src=".assets/chuggingface_toolkit.png" width="512" alt="ChuggingFace">
+
+---
+
+**p9iaai** <img src=".assets/p9iaai.png" width="32" align="middle"> **2025**
+
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/p9iaai)
+
+---
+
+</div>

@@ -57,7 +57,7 @@ def main():
     
     successful = 0
     for idx, image_path in enumerate(image_files, 1):
-        print(f"\n🙄   Processing {idx}/{total}: {Path(image_path).name}\n")
+        print(f"\n🙄   Processing {idx}/{total}: {Path(image_path).name}")
         if process_image(client, image_path):
             successful += 1
     
