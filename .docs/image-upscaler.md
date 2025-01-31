@@ -62,7 +62,6 @@ Filenames are output in the following format `Upscaled_{scale}x_'{enhance_mode}'
 
 The script logs all activities to both console and file:
 
-- Console output is color-coded for better visibility
 - Log files are stored in `.logs/image-upscaler.txt`
 
 Log levels:
