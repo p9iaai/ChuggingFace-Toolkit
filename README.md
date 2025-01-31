@@ -51,6 +51,51 @@ Developed in `Python v3.11.9`
 HF_TOKEN=hf_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 ```
 
+## 😎 Manual Installation
+
+For users who want to understand or customize the setup process, here are the manual steps equivalent to running `setup.bat`:
+
+1. **Create Virtual Environment**
+   ```bash
+   python -m venv .venv
+   ```
+
+2. **Activate Virtual Environment**
+   ```bash
+   # Windows
+   .venv\Scripts\activate
+   
+   # Linux/MacOS
+   source .venv/bin/activate
+   ```
+
+3. **Upgrade pip**
+   ```bash
+   python -m pip install --upgrade pip
+   ```
+
+4. **Install Requirements**
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+5. **Create Folder Structure**
+   ```bash
+   mkdir .logs
+   mkdir input
+   mkdir output
+   ```
+
+6. **Create .env File**
+   ```bash
+   if not exist .env echo. > .env
+   ```
+
+7. **Add HuggingFace Token**
+   Edit the `.env` file and add your 🤗HuggingFace token:
+
+---
+
 ## 📦 Requirements
 
 - Python 3.7+
