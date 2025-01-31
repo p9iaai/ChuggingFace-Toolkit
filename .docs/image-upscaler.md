@@ -56,7 +56,7 @@ upscale_images(
 
 Filenames are output in the following format `Upscaled_{scale}x_'{enhance_mode}'-{image_file}`:
 
-- `Upscaled_2x_'Only Image Enhance'-huggingface_toolkit.png`
+- `Upscaled_2x_'Only Image Enhance'-chuggingface_toolkit.png`
 
 ## Logging
 
