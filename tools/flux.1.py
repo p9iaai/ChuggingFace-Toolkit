@@ -107,6 +107,9 @@ def generate_image(prompt, model="FLUX.1-schnell", guidance_scale=7.5, num_infer
     image.save(output_path)
     
     # Print and log the results
+    log_dir = ".logs"
+    os.makedirs(log_dir, exist_ok=True)
+
     print(f"\n     💾   PNG SAVED TO     >   {output_path}")
     print(f"     🤖   MODEL            >   {model}")
     print(f"     🎲   SEED             >   {seed}")
@@ -118,11 +121,11 @@ def generate_image(prompt, model="FLUX.1-schnell", guidance_scale=7.5, num_infer
 
 # Example usage (FLUX models do not use negative prompts)
 
-generate_image("a frog walking in a comic book art style")
-generate_image("a frog walking in a realistic art style")
-generate_image("a frog walking in a neon art style")
-generate_image("a frog walking in a fantasy art style")
-generate_image("a frog walking in a science fiction art style")
-generate_image("a frog walking in a b-movie art style")
-generate_image("a frog walking in a jacobian art style")
-generate_image("a frog walking in a comedic art style")
+# generate_image("a frog walking in a comic book art style")
+# generate_image("a frog walking in a realistic art style")
+# generate_image("a frog walking in a neon art style")
+# generate_image("a frog walking in a fantasy art style")
+# generate_image("a frog walking in a science fiction art style")
+# generate_image("a frog walking in a b-movie art style")
+# generate_image("a frog walking in a jacobian art style")
+# generate_image("a frog walking in a comedic art style")

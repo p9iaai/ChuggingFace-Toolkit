@@ -109,6 +109,9 @@ def generate_image(prompt, model="stable-diffusion-3.5-large", negative_prompt="
     image.save(output_path)
     
     # Print and log the results
+    log_dir = ".logs"
+    os.makedirs(log_dir, exist_ok=True)
+
     print(f"\n     💾   PNG SAVED TO     >   {output_path}")
     print(f"     🤖   MODEL            >   {model}")
     print(f"     🎲   SEED             >   {seed}")
@@ -121,11 +124,11 @@ def generate_image(prompt, model="stable-diffusion-3.5-large", negative_prompt="
 
 # generate_image("the prompt", negative_prompt="blurry, bad quality", guidance_scale=4.5, num_inference_steps=40, width=1024, height=1024, max_retries=9)
 
-generate_image("a photo of a frog walking in a comic book art style")
-generate_image("a photo of a frog walking in a realistic art style")
-generate_image("a photo of a frog walking in a neon art style")
-generate_image("a photo of a frog walking in a fantasy art style")
-generate_image("a photo of a frog walking in a science fiction art style")
-generate_image("a photo of a frog walking in a b-movie art style")
-generate_image("a photo of a frog walking in a jacobian art style")
-generate_image("a photo of a frog walking in a comedic art style")
+# generate_image("a photo of a frog walking in a comic book art style")
+# generate_image("a photo of a frog walking in a realistic art style")
+# generate_image("a photo of a frog walking in a neon art style")
+# generate_image("a photo of a frog walking in a fantasy art style")
+# generate_image("a photo of a frog walking in a science fiction art style")
+# generate_image("a photo of a frog walking in a b-movie art style")
+# generate_image("a photo of a frog walking in a jacobian art style")
+# generate_image("a photo of a frog walking in a comedic art style")
