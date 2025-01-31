@@ -56,12 +56,14 @@ HF_TOKEN=hf_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 For users who want to understand or customize the setup process, here are the manual steps equivalent to running `setup.bat`:
 
 1. **Create Virtual Environment**
-   ```bash
+
+   ```terminal
    python -m venv .venv
    ```
 
 2. **Activate Virtual Environment**
-   ```bash
+
+   ```terminal
    # Windows
    .venv\Scripts\activate
    
@@ -70,29 +72,38 @@ For users who want to understand or customize the setup process, here are the ma
    ```
 
 3. **Upgrade pip**
-   ```bash
+
+   ```terminal
    python -m pip install --upgrade pip
    ```
 
 4. **Install Requirements**
-   ```bash
+
+   ```terminal
    pip install -r requirements.txt
    ```
 
 5. **Create Folder Structure**
-   ```bash
+
+   ```terminal
    mkdir .logs
    mkdir input
    mkdir output
    ```
 
 6. **Create .env File**
-   ```bash
+
+   ```terminal
    if not exist .env echo. > .env
    ```
 
 7. **Add HuggingFace Token**
-   Edit the `.env` file and add your 🤗HuggingFace token:
+
+Edit the `.env` file and add your 🤗HuggingFace token:
+
+```text
+HF_TOKEN=hf_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+```
 
 ---
 
