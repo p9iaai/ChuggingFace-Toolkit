@@ -1,6 +1,7 @@
 import requests
 import re
 import os
+import time
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -24,7 +25,10 @@ input_text = input("💬   Enter the text to convert to speech: ")
 safe_filename = re.sub(r'[^\w\s-]', '', input_text).replace(' ', '_')[:50]  # Remove special characters and limit length
 
 # Ensure it has a .wav extension
-output_file = f"output/text-to-speech/{safe_filename}.wav"
+timestamp = int(time.time())
+output_dir = "output/text-to-speech"
+os.makedirs(output_dir, exist_ok=True)
+output_file = f"{output_dir}/{timestamp}-{safe_filename}.wav"
 
 # Get the audio bytes
 audio_bytes = query({"inputs": input_text})
