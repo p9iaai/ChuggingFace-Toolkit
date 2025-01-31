@@ -132,7 +132,7 @@ To include background noise or environmental sounds, use the following syntax:
 
 ```plaintext
 "[RAIN] It's a rainy day, perfect for getting wet outside."
-"[CROWD] The market was bustling with people, so I'm going home because people are mostly annoying."
+"[CROWD] The market is bustling with people, so I'm going home because people are mostly annoying."
 ```
 
 ---
