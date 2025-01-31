@@ -138,17 +138,9 @@ We appreciate your contributions and look forward to seeing your tools in action
 ---
 
 ## 📄 License
-- [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
-
-This project is licensed under the **GNU General Public License v3.0**.
+- [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 See the [LICENSE](LICENSE) file for the full text of the license.
-
-This means:
-
-- You are free to use, modify, and distribute this software.
-- If you distribute this software or any derivative works, you must also provide the source code under the same license.
-- You must include the original license and copyright notice.
 
 ---
 
