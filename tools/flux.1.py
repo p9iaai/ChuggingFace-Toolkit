@@ -45,8 +45,8 @@ def generate_image_with_timeout(model, prompt, guidance_scale, num_inference_ste
             print(f"\n    😈   Response headers: {e.response.headers}")
         raise e
 
-# def generate_image(prompt, model="FLUX.1-schnell", guidance_scale=7.5, num_inference_steps=6, width=1024, height=1024, max_retries=9):
-def generate_image(prompt, model="FLUX.1-dev", guidance_scale=5, num_inference_steps=24, width=1024, height=1024, max_retries=9):
+def generate_image(prompt, model="FLUX.1-schnell", guidance_scale=7.5, num_inference_steps=6, width=1024, height=1024, max_retries=9):
+# def generate_image(prompt, model="FLUX.1-dev", guidance_scale=5, num_inference_steps=24, width=1024, height=1024, max_retries=9):
     """
     Generates an image based on a given text prompt using the specified model.
     
