@@ -33,7 +33,12 @@ output_file = f"{output_dir}/{timestamp}-{safe_filename}.wav"
 # Get the audio bytes
 audio_bytes = query({"inputs": input_text})
 
-# Save the audio to a file
+# Save the audio and log to a file
+log_dir = ".logs"
+os.makedirs(log_dir, exist_ok=True)
+
+with open(f".logs/text-to-speech.txt", "a") as log_file:
+    log_file.write(f"TIME:     {timestamp}\nPROMPT:   {input_text}\nSAVED AS: {output_dir}/{timestamp}-{safe_filename}.wav\n\n")                   
 if audio_bytes:
     with open(output_file, "wb") as f:
         f.write(audio_bytes)
