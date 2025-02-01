@@ -82,7 +82,7 @@ To generate speech, simply provide the text you want the model to speak:
 "I'll be perfectly honest, I could eat another six of those."
 ```
 
-<audio controls src=".assets/1738362912-Ill_be_perfectly_honest_I_could_eat_another_six_of.wav"></audio>
+<audio controls src=".assets/1738362912-Ill_be_perfectly_honest_I_could_eat_another_six_of-converted.mp3"></audio>
 
 ---
 
@@ -100,7 +100,7 @@ To change the gender of the speaker, use the following syntax:
 [FEMALE] "This is possibly a female voice speaking."
 ```
 
-<audio controls src=".assets/1738363175-MALE_This_is_possibly_a_male_voice_speaking.wav"></audio> <img src="../chuggingface_toolkit.png" width="40" alt="ChuggingFace"> <audio controls src=".assets/1738363507-FEMALE_This_is_possibly_a_female_voice_speaking.wav"></audio>
+<audio controls src=".assets/1738363175-MALE_This_is_possibly_a_male_voice_speaking-converted.mp3"></audio> <img src="../chuggingface_toolkit.png" width="40" alt="ChuggingFace"> <audio controls src=".assets/1738363507-FEMALE_This_is_possibly_a_female_voice_speaking-converted.mp3"></audio>
 ---
 
 ## Adding Effects
@@ -115,7 +115,7 @@ You can add effects like laughter, pauses, or emphasis by using special tags or 
    "That was actually pretty funny, Dave! [LAUGH]"
    ```
 
-- <audio controls src=".assets/1738363638-That_was_actually_pretty_funny_Dave_LAUGH.wav"></audio>
+- <audio controls src=".assets/1738363638-That_was_actually_pretty_funny_Dave_LAUGH-converted.mp3"></audio>
 
 2. **Pause**: Use `[PAUSE]` or `...` for a short pause.
 
@@ -123,7 +123,7 @@ You can add effects like laughter, pauses, or emphasis by using special tags or 
    "Let me have a think... [PAUSE] Nope, I think I'd rather be trampled by bulls!"
    ```
 
-- <audio controls src=".assets/1738363885-Let_me_have_a_think_PAUSE_Nope_I_think_Id_rather_b.wav"></audio>
+- <audio controls src=".assets/1738363885-Let_me_have_a_think_PAUSE_Nope_I_think_Id_rather_b-converted.mp3"></audio>
 
 3. **Whisper**: Use `[WHISPER]` for a whispered tone.
 
@@ -131,7 +131,7 @@ You can add effects like laughter, pauses, or emphasis by using special tags or 
    "[WHISPER] This is a secret, so I suggest you go away."
    ```
 
-- <audio controls src=".assets/1738363994-WHISPER_This_is_a_secret_so_I_suggest_you_go_away.wav"></audio>
+- <audio controls src=".assets/1738363994-WHISPER_This_is_a_secret_so_I_suggest_you_go_away-converted.mp3"></audio>
 
 4. **Shouting**: Use `[SHOUT]` for a louder, emphasized tone.
 
@@ -139,7 +139,7 @@ You can add effects like laughter, pauses, or emphasis by using special tags or 
    "[SHOUT] Watch out! Frank's on the warpath with his crossbow. Frank's annoying."
    ```
 
-- <audio controls src=".assets/1738364309-SHOUT_Watch_out_Franks_on_the_warpath_with_his_cro.wav"></audio>
+- <audio controls src=".assets/1738364309-SHOUT_Watch_out_Franks_on_the_warpath_with_his_cro-converted.mp3"></audio>
 - 😉 Turn your volume down a bit for this example.
 ---
 
@@ -160,7 +160,7 @@ To include background noise or environmental sounds, use the following syntax:
 "[CROWD] The market is bustling with people, so I'm going home because people are mostly annoying."
 ```
 
-<audio controls src=".assets/1738364555-RAIN_Its_a_rainy_day_perfect_for_getting_wet_outsi.wav"></audio> <img src="../chuggingface_toolkit.png" width="40" alt="ChuggingFace"> <audio controls src=".assets/1738364700-CROWD_The_market_is_bustling_with_people_so_Im_goi.wav"></audio>
+<audio controls src=".assets/1738364555-RAIN_Its_a_rainy_day_perfect_for_getting_wet_outsi-converted.mp3"></audio> <img src="../chuggingface_toolkit.png" width="40" alt="ChuggingFace"> <audio controls src=".assets/1738364700-CROWD_The_market_is_bustling_with_people_so_Im_goi-converted.mp3"></audio>
 ---
 
 ## Combining Effects
@@ -172,7 +172,7 @@ You can combine multiple effects and background noises in a single prompt.
 ```plaintext
 "[FEMALE] [RAIN] I love the sound of rain. [LAUGH] I can hear it with my ears!"
 ```
-<audio controls src=".assets/1738367236-FEMALE_RAIN_I_love_the_sound_of_rain_LAUGH_I_can_h.wav"></audio>
+<audio controls src=".assets/1738367236-FEMALE_RAIN_I_love_the_sound_of_rain_LAUGH_I_can_h-converted.mp3"></audio>
 ---
 
 ## Advanced Usage
@@ -189,7 +189,7 @@ For more control over the output, you can experiment with:
 "[MALE] [LOW_PITCH] [SLOW] This is a deep, slow voice. I reckon it could quite easily scare dogs."
 "[FEMALE] [HIGH_PITCH] [HAPPY] I'm so excited! There's a load of new scared dogs at the shelter I can adopt!"
 ```
-<audio controls src=".assets/1738366720-MALE_LOW_PITCH_SLOW_This_is_a_deep_slow_voice_I_re.wav"></audio> <img src="../chuggingface_toolkit.png" width="40" alt="ChuggingFace"> <audio controls src=".assets/1738367001-FEMALE_HIGH_PITCH_HAPPY_Im_so_excited_Theres_a_loa.wav"></audio> (!)
+<audio controls src=".assets/1738366720-MALE_LOW_PITCH_SLOW_This_is_a_deep_slow_voice_I_re-converted.mp3"></audio> <img src="../chuggingface_toolkit.png" width="40" alt="ChuggingFace"> <audio controls src=".assets/1738367001-FEMALE_HIGH_PITCH_HAPPY_Im_so_excited_Theres_a_loa-converted.mp3"></audio> (!)
 ---
 
 ## Notes
