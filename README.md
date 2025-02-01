@@ -142,13 +142,13 @@ Tools marked with 🔄 indicate that the Space is running on CPU.
 | --: | :-: | :-- |
 | `background-removal.py` | Removes backgrounds from images in a specified folder. | Spaces API 🤗 |
 | `canny-edge-detect.py` | Generates Canny edge-maps from images in input folder. | Spaces API 🤗 🔄 |
-| `depth-anything.py` | Generates state-of-the-art depth maps using DepthAnythingv2. | Spaces API 🤗 |
+| `depth-anything.py` | Generates depth maps using DepthAnythingv2. | Spaces API 🤗 |
 | `docmaker.py` | Converts YAML files into Markdown documentation. | 🤗 Serverless API |
 | `edit-image.py` | Transform images using AI with a prompt. | Spaces API 🤗 |
 | `face-swap.py` | Swaps faces between a source and target image. | Spaces API 🤗 |
 | `flux.1,py` | Generate images using FLUX.1 Dev or Schnell models. | 🤗 Serverless API |
 | `image-captioning.py` | Creates text captions for images in a folder. | 🤗 Serverless API |
-| `image-upscaler.py` | Upscales images (2x, 3x, 4x) and optionally enhances facial details. | Spaces API 🤗 |
+| `image-upscaler.py` | Upscales images and optionally enhances facial details. | Spaces API 🤗 |
 | `stable-diffusion.py` | Generates images using Stability AI diffusion models. | 🤗 Serverless API |
 | `text-to-speech.py` | Converts text into a WAV audio file. | 🤗 Serverless API |
 
