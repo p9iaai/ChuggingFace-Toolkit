@@ -140,6 +140,7 @@ Tools marked with 🔄 indicate that the Space is running on CPU. Usage of these
 | `canny-edge-detect.py` | Generates Canny edge-maps from images in input folder. | 🔄 Spaces API 🤗 |
 | `depth-anything.py` | Generates state-of-the-art depth maps using DepthAnythingv2. | Spaces API 🤗 |
 | `docmaker.py` | Converts YAML files into Markdown documentation. | 🤗 Serverless API |
+| `edit-image.py` | Transform images using AI with a prompt. | Spaces API 🤗 |
 | `face-swap.py` | Swaps faces between a source and target image. | Spaces API 🤗 |
 | `flux.1,py` | Generate images using FLUX.1 Dev or Schnell models. | 🤗 Serverless API |
 | `image-captioning.py` | Creates text captions for images in a folder. | 🤗 Serverless API |
