@@ -109,7 +109,7 @@ Below is a sample of three different outputs using the same prompt. Seed is rand
 
 | Input | Output 1 | Output 2 | Output 3 |
 | :-: | :-: | :-: | :-: |
-| <img src=".assets/superemoji9000.PNG" width="128"/> | <img src=".assets/1738446176_superemoji9000_82989921_edited.png" width="128" />| <img src=".assets/1738447490_superemoji9000_1876790049_edited.png" width="128" /> | <img src=".assets/1738447671_superemoji9000_1036142105_edited.png" width="128" /> |
+| <img src=".assets/superemoji9000.png" width="128"/> | <img src=".assets/1738446176_superemoji9000_82989921_edited.png" width="128" />| <img src=".assets/1738447490_superemoji9000_1876790049_edited.png" width="128" /> | <img src=".assets/1738447671_superemoji9000_1036142105_edited.png" width="128" /> |
 
 Click images to see them full size.
 
