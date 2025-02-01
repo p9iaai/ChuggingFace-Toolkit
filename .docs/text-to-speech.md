@@ -2,6 +2,8 @@
 
 This Python script uses the Suno Bark model from 🤗HuggingFace to convert text input into audio files.
 
+- **NOTE:** There is audio embedded in this document that you can't see on GitHub. Clone it to see or find the examples in `.assets/`
+
 ## Features
 
 - Converts text to speech using the Suno Bark model
