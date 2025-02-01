@@ -132,9 +132,12 @@ HF_TOKEN=hf_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 See individual tool docs in `.docs` folder for more information.
 
+Tools marked with 🔄 indicate that the Space is running on CPU. Usage of these tools will not count against your API and GPU 🤗HuggingFace account limits.
+
 | Tool | Description | API |
 | --: | :-: | :-- |
 | `background-removal.py` | Removes backgrounds from images in a specified folder. | Spaces API 🤗 |
+| `canny-edge-detect.py` | Generates Canny edge-maps from images in input folder. | 🔄 Spaces API 🤗 |
 | `depth-anything.py` | Generates state-of-the-art depth maps using DepthAnythingv2. | Spaces API 🤗 |
 | `docmaker.py` | Converts YAML files into Markdown documentation. | 🤗 Serverless API |
 | `face-swap.py` | Swaps faces between a source and target image. | Spaces API 🤗 |
