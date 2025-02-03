@@ -1,6 +1,5 @@
 import os
 import time
-from datetime import datetime
 from gradio_client import Client, handle_file
 import logging
 from PIL import Image
