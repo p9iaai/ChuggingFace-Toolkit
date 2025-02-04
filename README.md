@@ -36,22 +36,32 @@ Usage of these `🔄tools` will not count against your `🤗Serverless API` or `
 
 ## 📦 Requirements
 
-| Account Type | `🤗Spaces API` | `🤗Serverless API` |
+[![Python](https://img.shields.io/badge/Python-3.7%2B-blue)](https://www.python.org/)
+
+`🤗HuggingFace` Account & `Read` API Token (*`FREE`* or <img src=".docs/.assets/hf_pro.png" width="34">)
+
+| Account Type | `🤗Spaces API` Limits | `🤗Serverless API` Limits |
 | :-: | :-: | :-: |
 | *`FREE`* | 5 Minutes <img src=".docs/.assets/hf_zerogpu.png" width="56"> | 1,000 API Calls |
 | <img src=".docs/.assets/hf_pro.png" width="34"> | 25 Minutes <img src=".docs/.assets/hf_zerogpu.png" width="56"> | 20,000 API Calls |
 
-**NOTE:** All limits above are per 24 hours.
-
-[![Python](https://img.shields.io/badge/Python-3.7%2B-blue)](https://www.python.org/)
-
-`🤗HuggingFace` Account & `Read` API Token (*`FREE`* or <img src=".docs/.assets/hf_pro.png" width="34">)
+**NOTE:** All limits above are per 24 hours
 
 ### 🔗 API Usage
 
 `🤗Spaces API` scripts consume <img src=".docs/.assets/hf_zerogpu.png" width="56"> GPU time.
 
 `🤗Serverless API` scripts consume API requests.
+
+## 📑 Key Notes
+
+**Synchronous Execution:** Scripts are designed to process API calls sequentially to be mindful of free-tier server limitations. While asynchronous execution is possible, it may lead to inefficient API usage for free-tier users.
+
+**Gated Models:** Some models require access approval. Visit the respective 🤗HuggingFace model pages to request access. Details and links are available in `.gated-models.md` in the `.docs` folder.
+
+**Portability:** Each script is confined to a single file for easy integration into function calling or agentic tools.
+
+**Important Notice Regarding Spaces API:** See `.IMPORTANT.md` in `.docs/.api/` folder.
 
 <div align="left">
 
