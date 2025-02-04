@@ -1,8 +1,6 @@
 <div align="center">
 
----
-
-# <img src="chuggingface_toolkit.png" width="40" alt="ChuggingFace"> ChuggingFace Toolkit <img src="chuggingface_toolkit.png" width="40" alt="ChuggingFace"> 
+# <img src="chuggingface_toolkit.png" width="40" alt="ChuggingFace"> **ChuggingFace Toolkit** <img src="chuggingface_toolkit.png" width="40" alt="ChuggingFace"> 
 
 [![Python](https://img.shields.io/badge/Python-3.7%2B-blue)](https://www.python.org/)
 [![HuggingFace](https://img.shields.io/badge/🤗-HuggingFace-yellow)](https://huggingface.co/)
@@ -10,147 +8,103 @@
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/p9iaai)
 
+This project is primarily designed for prototyping and leverages both 🤗HuggingFace Spaces and Serverless Inference API.
+
+All scripts can be used with ***`ZERO`*** API costs and was developed in `Python v3.11.9`
+
+## 🛠 **Available Tools**
+
+See individual tool docs in `.docs` folder for more information.
+
+Tools marked with 🔄 indicate that the Space is running on CPU.
+
+Usage of these `🔄tools` will not count against your `🤗Serverless API` or `🤗Spaces API` GPU time.
+
+| Tool | Description | API |
+| :-: | :-: | :-: |
+| `background-removal.py` | Removes backgrounds from images | Spaces API 🤗 |
+| `canny-edge-detect.py` | Generates Canny edge maps from images | Spaces API 🤗 🔄 |
+| `depth-anything.py` | Generates depth maps using DepthAnythingv2 | Spaces API 🤗 |
+| `docmaker.py` | Converts YAML files into Markdown docs | 🤗 Serverless API |
+| `edit-image.py` | Transform images using AI with a prompt | Spaces API 🤗 |
+| `face-swap.py` | Swap faces between a source and target image | Spaces API 🤗 |
+| `flux.1,py` | FLUX.1 AI image generation | 🤗 Serverless API |
+| `image-captioning.py` | Creates text captions for images | 🤗 Serverless API |
+| `image-upscaler.py` | Upscales images and enhances facial details | Spaces API 🤗 |
+| `stable-diffusion.py` | Stable Diffusion AI image generation | 🤗 Serverless API |
+| `text-to-speech.py` | Converts text into a WAV audio file | 🤗 Serverless API |
+
+## 📦 Requirements
+
+| Account Type | `🤗Spaces API` | `🤗Serverless API` |
+| :-: | :-: | :-: |
+| *`FREE`* | 5 Minutes <img src=".docs/.assets/hf_zerogpu.png" width="56"> | 1,000 API Calls |
+| <img src=".docs/.assets/hf_pro.png" width="34"> | 25 Minutes <img src=".docs/.assets/hf_zerogpu.png" width="56"> | 20,000 API Calls |
+
+**NOTE:** All limits above are per 24 hours.
+
+[![Python](https://img.shields.io/badge/Python-3.7%2B-blue)](https://www.python.org/)
+
+`🤗HuggingFace` Account & `Read` API Token (*`FREE`* or <img src=".docs/.assets/hf_pro.png" width="34">)
+
+### 🔗 API Usage
+
+`🤗Spaces API` scripts consume <img src=".docs/.assets/hf_zerogpu.png" width="56"> GPU time.
+
+`🤗Serverless API` scripts consume API requests.
+
 <div align="left">
-
-This project is designed for prototyping and leverages both 🤗HuggingFace Spaces and the Serverless Inference API. All scripts can be used at ***`ZERO`*** cost.
-
-Developed in `Python v3.11.9`
-
-## 📑 Key Notes
-
-- **Synchronous Execution:** Scripts are designed to process API calls sequentially to be mindful of free-tier server limitations. While asynchronous execution is possible, it may lead to inefficient API usage for free-tier users.
-- **Gated Models:** Some models require access approval. Visit the respective 🤗HuggingFace model pages to request access. Details and links are available in `.gated-models.md` in the `.docs` folder.
-- **Portability:** Each script is confined to a single file for easy integration into function calling or agentic tools.
-- **Important Notice Regarding Spaces API:** See `.IMPORTANT.md` in `.docs/.api/` folder.
 
 ## 🚀 Quick Setup
 
-- **Windows**
-  - Run the setup script:
-    - `.\setup.bat`
+### Using Setup Script
 
-- **Linux**
-  - Make the setup script executable by running:
-    - `chmod +x setup.sh`
-  - Run the script:
-    - `./setup.sh`
+| OS | Command | |
+| --- | --- | --- |
+| **Windows** | .\setup.bat | |
+| **Linux/MacOS** | chmod +x setup.sh |
+| | ./setup.sh| **Note for MacOS:** Requires Python 3. Install via `brew install python` if needed. |
 
-- **MacOS**
-  - **Python 3:** macOS comes with Python 2 pre-installed, but Python 3 is required for this script. Ensure Python 3 is installed. You can install it via Homebrew (recommended):
-    - `brew install python`
-  - After installation, verify that `python3` is available:
-    - `python3 --version`
-  - Make the setup script executable by running:
-    - `chmod +x setup.sh`
-  - Run the script:
-    - `./setup.sh`
-
-- Add your 🤗HuggingFace token to the .env file:
-
+### Add HuggingFace Token
+Add your token to `.env`:
 ```text
 HF_TOKEN=hf_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 ```
 
 ## 😎 Manual Installation
 
-For users who want to understand or customize the setup process, here are the manual steps equivalent to running `setup.bat`:
+1. Create and activate virtual environment:
+```terminal
+# Create
+python -m venv .venv
 
-1. **Create Virtual Environment**
+# Activate (Windows)
+.venv\Scripts\activate
 
-   ```terminal
-   python -m venv .venv
-   ```
+# Activate (Linux/MacOS)
+source .venv/bin/activate
+```
 
-2. **Activate Virtual Environment**
+2. Install dependencies:
+```terminal
+pip install -r requirements.txt
+```
 
-   ```terminal
-   # Windows
-   .venv\Scripts\activate
-   
-   # Linux/MacOS
-   source .venv/bin/activate
-   ```
+3. Create required directories and .env:
+```terminal
+mkdir .logs input output
+echo. > .env  # Windows
+touch .env    # Linux/MacOS
+```
 
-3. **Upgrade pip**
-
-   ```terminal
-   python -m pip install --upgrade pip
-   ```
-
-4. **Install Requirements**
-
-   ```terminal
-   pip install -r requirements.txt
-   ```
-
-5. **Create Folder Structure**
-
-   ```terminal
-   mkdir .logs
-   mkdir input
-   mkdir output
-   ```
-
-6. **Create .env File**
-
-   ```terminal
-   if not exist .env echo. > .env
-   ```
-
-7. **Add HuggingFace Token**
-
-Edit the `.env` file and add your 🤗HuggingFace token:
-
+4. Add your HuggingFace token to `.env`:
 ```text
 HF_TOKEN=hf_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 ```
 
 ---
 
-## 📦 Requirements
-
-- Python 3.7+
-
-- 🤗HuggingFace Account & API Token (*`FREE`* or <img src=".docs/.assets/hf_pro.png" width="34">)
-
-  - *`FREE`* accounts include:
-
-    - 5 minutes of <img src=".docs/.assets/hf_zerogpu.png" width="56"> GPU time per day.
-    - 1000 Inference API requests per day.
-
-  - *<img src=".docs/.assets/hf_pro.png" width="34">* accounts include:
-
-    - 25 minutes of <img src=".docs/.assets/hf_zerogpu.png" width="56"> GPU time per day.
-    - 20,000 Inference API requests per day.
-
-- API Usage:
-
-  - `🤗Spaces API` scripts consume <img src=".docs/.assets/hf_zerogpu.png" width="56"> GPU time.
-  - `🤗Serverless API` scripts consume API requests.
-
-## 🛠 Available Tools
-
-See individual tool docs in `.docs` folder for more information.
-
-Tools marked with 🔄 indicate that the Space is running on CPU.
-
-- Usage of these tools will not count against your `🤗Serverless API` or `🤗Spaces API` <img src=".docs/.assets/hf_zerogpu.png" width="56"> GPU time.
-
----
-
-| Tool | Description | API |
-| --: | :-: | :-- |
-| `background-removal.py` | Removes backgrounds from images in a specified folder. | Spaces API 🤗 |
-| `canny-edge-detect.py` | Generates Canny edge-maps from images in input folder. | Spaces API 🤗 🔄 |
-| `depth-anything.py` | Generates depth maps using DepthAnythingv2. | Spaces API 🤗 |
-| `docmaker.py` | Converts YAML files into Markdown documentation. | 🤗 Serverless API |
-| `edit-image.py` | Transform images using AI with a prompt. | Spaces API 🤗 |
-| `face-swap.py` | Swaps faces between a source and target image. | Spaces API 🤗 |
-| `flux.1,py` | Generate images using FLUX.1 Dev or Schnell models. | 🤗 Serverless API |
-| `image-captioning.py` | Creates text captions for images in a folder. | 🤗 Serverless API |
-| `image-upscaler.py` | Upscales images and optionally enhances facial details. | Spaces API 🤗 |
-| `stable-diffusion.py` | Generates images using Stability AI diffusion models. | 🤗 Serverless API |
-| `text-to-speech.py` | Converts text into a WAV audio file. | 🤗 Serverless API |
+<div align="left">
 
 ## 🧠 Contributing Guidelines
 
