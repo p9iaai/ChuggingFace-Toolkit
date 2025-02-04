@@ -69,11 +69,11 @@ Usage of these `🔄tools` will not count against your `🤗Serverless API` or `
 
 ### Using Setup Script
 
-| OS | Command | |
-| --- | --- | --- |
-| **Windows** | .\setup.bat | |
-| **Linux/MacOS** | chmod +x setup.sh |
-| | ./setup.sh| **Note for MacOS:** Requires Python 3. Install via `brew install python` if needed. |
+**Windows** `.\setup.bat`
+
+**Linux/MacOS** `chmod +x setup.sh` then `./setup.sh`
+
+- **Note for MacOS:** Requires Python 3. Install via `brew install python` if needed.
 
 ### Add HuggingFace Token
 Add your token to `.env`:
