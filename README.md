@@ -42,18 +42,27 @@ Usage of these `🔄tools` will not count against your `🤗Serverless API` or `
 
 ### 🔗 API Usage & Limits
 
-The HuggingFace Inference API operates on a credit-based system:
+The `🤗HuggingFace` Inference API operates on a credit-based system:
 
-| Account Type | Monthly Credits |
+| Account Type | Monthly `🤗Serverless API` Credits |
 | :-: | :-: |
 | *`FREE`* | Less than $0.10 |
 | <img src=".docs/.assets/hf_pro.png" width="34"> and Enterprise | $2.00 |
+
+---
+
+The `🤗HuggingFace` <img src=".docs/.assets/hf_zerogpu.png" width="48"> time remains the same (for `Spaces API🤗` scripts):
+
+| Account Type | Daily `Spaces API🤗` Credits |
+| :-: | :-: |
+| *`FREE`* | 5 Minutes |
+| <img src=".docs/.assets/hf_pro.png" width="34"> and Enterprise | 25 Minutes |
 
 **Pricing:**
 
 Charges based on compute time × hardware price
 
-Example: 10-second request on GPU ($0.00012/sec) = $0.0012
+Example: 10-second `🤗Serverless API` request on GPU ($0.00012/sec) = $0.0012
 
 **Important Notes:**
 
