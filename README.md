@@ -40,18 +40,35 @@ Usage of these `🔄tools` will not count against your `🤗Serverless API` or `
 
 `🤗HuggingFace` Account & `Read` API Token (*`FREE`* or <img src=".docs/.assets/hf_pro.png" width="34">)
 
-| Account Type | `🤗Spaces API` Limits | `🤗Serverless API` Limits |
-| :-: | :-: | :-: |
-| *`FREE`* | 5 Minutes <img src=".docs/.assets/hf_zerogpu.png" width="56"> | 1,000 API Calls |
-| <img src=".docs/.assets/hf_pro.png" width="34"> | 25 Minutes <img src=".docs/.assets/hf_zerogpu.png" width="56"> | 20,000 API Calls |
+### 🔗 API Usage & Limits
 
-**NOTE:** All limits above are per 24 hours
+The HuggingFace Inference API operates on a credit-based system:
 
-### 🔗 API Usage
+| Account Type | Monthly Credits |
+| :-: | :-: |
+| *`FREE`* | Less than $0.10 |
+| <img src=".docs/.assets/hf_pro.png" width="34"> and Enterprise | $2.00 |
 
-`🤗Spaces API` scripts consume <img src=".docs/.assets/hf_zerogpu.png" width="56"> GPU time.
+**Pricing:**
 
-`🤗Serverless API` scripts consume API requests.
+Charges based on compute time × hardware price
+
+Example: 10-second request on GPU ($0.00012/sec) = $0.0012
+
+**Important Notes:**
+
+**When credits are depleted:**
+
+**Free users:** API access stops  
+**PRO/Enterprise users:** Additional usage billed beyond subscription  
+Not intended for heavy production use  
+Authentication required (`token or browser`)  
+Monitor usage on billing page (`PRO`/`Enterprise`)  
+
+**For production-scale applications, consider:**
+
+Inference Endpoints (`dedicated resources`)  
+Inference Providers (`serverless usage`)
 
 ## 📑 Key Notes
 
