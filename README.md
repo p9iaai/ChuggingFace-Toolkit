@@ -34,6 +34,13 @@ Usage of these `🔄tools` will not count against your `🤗Serverless API` or `
 | `stable-diffusion.py` | Stable Diffusion AI image generation | 🤗 Serverless API |
 | `text-to-speech.py` | Converts text into a WAV audio file | 🤗 Serverless API |
 
+## <img src="chuggingface_toolkit.png" width="40" alt="ChuggingFace"> ChuggingFace UI! <img src="chuggingface_toolkit.png" width="40" alt="ChuggingFace">
+
+### You can now use the first 4 tools in the new UI!
+### Run `chuggingface-ui.py`! A Gradio app will spin up on `port 7860`.
+### It is essentially `monkey-patching` the tool scripts which remain unchanged so you can still use them individually.
+### Full UI will be completed when I get around to it as I am currently working on another large personal project.
+
 ## 📦 Requirements
 
 [![Python](https://img.shields.io/badge/Python-3.7%2B-blue)](https://www.python.org/)
@@ -42,12 +49,14 @@ Usage of these `🔄tools` will not count against your `🤗Serverless API` or `
 
 ### 🔗 API Usage & Limits
 
-The `🤗HuggingFace` Inference API operates on a credit-based system:
+**UPDATED: 4th Feb. 2025**
+
+The `🤗HuggingFace` Inference API now operates on a credit-based system:
 
 | Account Type | Monthly `🤗Serverless API` Credits |
 | :-: | :-: |
 | *`FREE`* | Less than $0.10 |
-| <img src=".docs/.assets/hf_pro.png" width="34"> and Enterprise | $2.00 |
+| <img src=".docs/.assets/hf_pro.png" width="34"> | $2.00 |
 
 ---
 
@@ -55,8 +64,8 @@ The `🤗HuggingFace` <img src=".docs/.assets/hf_zerogpu.png" width="48"> time r
 
 | Account Type | Daily `Spaces API🤗` Credits |
 | :-: | :-: |
-| *`FREE`* | 5 Minutes |
-| <img src=".docs/.assets/hf_pro.png" width="34"> and Enterprise | 25 Minutes |
+| *`FREE`* | 5 Minutes <img src=".docs/.assets/hf_zerogpu.png" width="48">|
+| <img src=".docs/.assets/hf_pro.png" width="34"> | 25 Minutes <img src=".docs/.assets/hf_zerogpu.png" width="48">|
 
 **Pricing:**
 
@@ -69,7 +78,8 @@ Example: 10-second `🤗Serverless API` request on GPU ($0.00012/sec) = $0.0012
 **When credits are depleted:**
 
 **Free users:** API access stops  
-**PRO/Enterprise users:** Additional usage billed beyond subscription  
+**PRO/Enterprise users:** Additional usage billed beyond subscription
+
 Not intended for heavy production use  
 Authentication required (`token or browser`)  
 Monitor usage on billing page (`PRO`/`Enterprise`)  
