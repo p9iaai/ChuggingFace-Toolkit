@@ -12,6 +12,8 @@ This project is primarily designed for prototyping and leverages both 🤗Huggin
 
 All scripts can be used with ***`ZERO`*** API costs and was developed in `Python v3.11.9`
 
+---
+
 ## 🛠 **Available Tools**
 
 See individual tool docs in `.docs` folder for more information.
@@ -34,6 +36,8 @@ Usage of these `🔄tools` will not count against your `🤗Serverless API` or `
 | `stable-diffusion.py` | Stable Diffusion AI image generation | 🤗 Serverless API |
 | `text-to-speech.py` | Converts text into a WAV audio file | 🤗 Serverless API |
 
+---
+
 ## <img src="chuggingface_toolkit.png" width="40" alt="ChuggingFace"> ChuggingFace UI! <img src="chuggingface_toolkit.png" width="40" alt="ChuggingFace">
 
 ### You can now use the first 4 tools in the new UI!
@@ -41,11 +45,15 @@ Usage of these `🔄tools` will not count against your `🤗Serverless API` or `
 ### It is essentially `monkey-patching` the tool scripts which remain unchanged so you can still use them individually.
 ### Full UI will be completed when I get around to it as I am currently working on another large personal project.
 
+---
+
 ## 📦 Requirements
 
 [![Python](https://img.shields.io/badge/Python-3.7%2B-blue)](https://www.python.org/)
 
 `🤗HuggingFace` Account & `Read` API Token (*`FREE`* or <img src=".docs/.assets/hf_pro.png" width="34">)
+
+---
 
 ### 🔗 API Usage & Limits
 
@@ -58,8 +66,6 @@ The `🤗HuggingFace` Inference API now operates on a credit-based system:
 | *`FREE`* | Less than $0.10 |
 | <img src=".docs/.assets/hf_pro.png" width="34"> | $2.00 |
 
----
-
 The `🤗HuggingFace` <img src=".docs/.assets/hf_zerogpu.png" width="48"> time remains the same (for `Spaces API🤗` scripts):
 
 | Account Type | Daily `Spaces API🤗` Credits |
@@ -67,7 +73,9 @@ The `🤗HuggingFace` <img src=".docs/.assets/hf_zerogpu.png" width="48"> time r
 | *`FREE`* | 5 Minutes <img src=".docs/.assets/hf_zerogpu.png" width="48">|
 | <img src=".docs/.assets/hf_pro.png" width="34"> | 25 Minutes <img src=".docs/.assets/hf_zerogpu.png" width="48">|
 
-**Pricing:**
+---
+
+### 💵 Pricing
 
 Charges based on compute time × hardware price
 
@@ -89,17 +97,21 @@ Monitor usage on billing page (`PRO`/`Enterprise`)
 Inference Endpoints (`dedicated resources`)  
 Inference Providers (`serverless usage`)
 
+---
+
 ## 📑 Key Notes
 
 **Synchronous Execution:** Scripts are designed to process API calls sequentially to be mindful of free-tier server limitations. While asynchronous execution is possible, it may lead to inefficient API usage for free-tier users.
 
-**Gated Models:** Some models require access approval. Visit the respective 🤗HuggingFace model pages to request access. Details and links are available in `.gated-models.md` in the `.docs` folder.
+**Gated Models:** Some models require access approval. Visit the respective `🤗HuggingFace` model pages to request access. Details and links are available in `.gated-models.md` in the `.docs` folder.
 
 **Portability:** Each script is confined to a single file for easy integration into function calling or agentic tools.
 
 **Important Notice Regarding Spaces API:** See `.IMPORTANT.md` in `.docs/.api/` folder.
 
 <div align="left">
+
+---
 
 ## 🚀 Quick Setup
 
@@ -116,6 +128,8 @@ Add your token to `.env`:
 ```text
 HF_TOKEN=hf_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 ```
+
+---
 
 ## 😎 Manual Installation
 
@@ -149,8 +163,6 @@ HF_TOKEN=hf_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 ```
 
 ---
-
-<div align="left">
 
 ## 🧠 Contributing Guidelines
 
